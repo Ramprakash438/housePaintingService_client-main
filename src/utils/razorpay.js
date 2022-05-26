@@ -27,11 +27,11 @@ export const razorpay = async (totalPrice, firstName, lastName, email, mobile, d
         alert('Razorpay SDK failed to load. Are you online?')
         return
     }
-    const response = await axios.post("https://house-painting-service.herokuapp.com/razorpay", { price: totalPrice })
+    const response = await axios.post("https://housepainting-service.herokuapp.com/razorpay", { price: totalPrice })
 
     const data = response.data;
     const options = {
-        key: 'rzp_test_8esi5HFkjW0AdE',
+        key: 'rzp_test_KINffTCCCW0I3e',
         currency: data.currency,
         amount: data.amount.toString(),
         order_id: data.id,
